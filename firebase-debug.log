@@ -1,0 +1,555 @@
+[debug] [2022-03-18T12:22:37.220Z] ----------------------------------------------------------------------
+[debug] [2022-03-18T12:22:37.225Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-03-18T12:22:37.226Z] CLI Version:   10.3.1
+[debug] [2022-03-18T12:22:37.227Z] Platform:      win32
+[debug] [2022-03-18T12:22:37.227Z] Node Version:  v16.14.1
+[debug] [2022-03-18T12:22:37.229Z] Time:          Fri Mar 18 2022 09:22:37 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-03-18T12:22:37.230Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-18T12:22:37.251Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-18T12:22:37.252Z] > authorizing via signed-in user (maximiano.neto@pumpkintech.com.br)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\maxim\IdeaProjects\FirebaseWeb
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-03-18T12:23:47.442Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-03-18T12:23:47.443Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-18T12:23:47.747Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Fri, 18 Mar 2022 12:23:47 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-18T12:23:47.777Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"1:340072282581:web:727ce2bfac92853160655c","name":"PushNotificationTeste"}
+[debug] [2022-03-18T12:23:48.718Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 18 Mar 2022 12:23:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=747","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-18T12:23:48.718Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [project_id cannot have more than one colon. (One colon can be used to separate domain from project id).]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id cannot have more than one colon. (One colon can be used to separate domain from project id)."}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2022-03-18T12:23:48.883Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id cannot have more than one colon. (One colon can be used to separate domain from project id).]
+    at module.exports (C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:47:12)
+    at Request._callback (C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:526:28)
+    at Request.emit (node:domain:475:12)
+    at Request.<anonymous> (C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:526:28)
+    at Request.emit (node:domain:475:12)
+    at IncomingMessage.<anonymous> (C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:645:28)
+    at IncomingMessage.emit (node:events:538:35)
+    at IncomingMessage.emit (node:domain:475:12)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2022-03-18T12:24:12.446Z] ----------------------------------------------------------------------
+[debug] [2022-03-18T12:24:12.453Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-03-18T12:24:12.454Z] CLI Version:   10.3.1
+[debug] [2022-03-18T12:24:12.454Z] Platform:      win32
+[debug] [2022-03-18T12:24:12.455Z] Node Version:  v16.14.1
+[debug] [2022-03-18T12:24:12.456Z] Time:          Fri Mar 18 2022 09:24:12 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-03-18T12:24:12.457Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-18T12:24:12.482Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-18T12:24:12.483Z] > authorizing via signed-in user (maximiano.neto@pumpkintech.com.br)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\maxim\IdeaProjects\FirebaseWeb
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-03-18T12:24:19.386Z] > refreshing access token with scopes: []
+[debug] [2022-03-18T12:24:19.388Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-03-18T12:24:19.659Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 18 Mar 2022 12:24:19 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-03-18T12:24:19.699Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-03-18T12:24:20.241Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-03-18T12:24:20.242Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project cloud-messaging-onnibank-dev (Cloud-Messaging-Onnibank-Dev) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-03-18T12:25:15.526Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-03-18T12:25:15.637Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-03-18T12:25:15.637Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.9","browserURL":"https://www.gstatic.com/firebasejs/9.6.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.9/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.9/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.9/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.9/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.9/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.9/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.9/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.9/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\maxim\IdeaProjects\FirebaseWeb is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=1070131289&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-03-18T12:25:23.579Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"db193a96f9dcaee449d6","redirect_uri":"http://localhost:9005","state":"1070131289"}
+[debug] [2022-03-18T12:25:23.964Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Fri, 18 Mar 2022 12:25:23 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"e280094ef17fce5699b6b54db870b702\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com collector.github.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com collector.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"D75D:59E4:118DF9:1AE20B:62347A33"}
+[debug] [2022-03-18T12:25:23.983Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-03-18T12:25:24.376Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-03-18T12:25:24.376Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"MaximianoPumpkin","id":101645098,"node_id":"U_kgDOBg77Kg","avatar_url":"https://avatars.githubusercontent.com/u/101645098?v=4","gravatar_id":"","url":"https://api.github.com/users/MaximianoPumpkin","html_url":"https://github.com/MaximianoPumpkin","followers_url":"https://api.github.com/users/MaximianoPumpkin/followers","following_url":"https://api.github.com/users/MaximianoPumpkin/following{/other_user}","gists_url":"https://api.github.com/users/MaximianoPumpkin/gists{/gist_id}","starred_url":"https://api.github.com/users/MaximianoPumpkin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MaximianoPumpkin/subscriptions","organizations_url":"https://api.github.com/users/MaximianoPumpkin/orgs","repos_url":"https://api.github.com/users/MaximianoPumpkin/repos","events_url":"https://api.github.com/users/MaximianoPumpkin/events{/privacy}","received_events_url":"https://api.github.com/users/MaximianoPumpkin/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2022-03-15T12:58:57Z","updated_at":"2022-03-15T12:58:57Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as MaximianoPumpkin 
+[info] 
+[debug] [2022-03-18T12:26:28.170Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:28.402Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:28.403Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:48.569Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:48.832Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:48.833Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:49.144Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:49.382Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:49.382Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:50.658Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:50.894Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:50.894Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:50.916Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:51.160Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:51.161Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:51.194Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:51.450Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:51.450Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:51.458Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:51.694Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:51.694Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:51.717Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:51.945Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:51.946Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:52.197Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:52.427Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:52.427Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:52.494Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:52.727Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:52.727Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:52.803Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:53.029Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:53.029Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:53.382Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:53.612Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:53.612Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:53.668Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:53.899Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:53.900Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:53.971Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:54.210Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:54.210Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:54.277Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:54.500Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:54.500Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:54.540Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:54.763Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:54.763Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:54.802Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:55.025Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:55.026Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:55.058Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:55.271Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:55.282Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:55.282Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:55.494Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:55.501Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:55.502Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:55.702Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:55.730Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:55.730Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:55.924Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:55.924Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:58.254Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:26:58.487Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:26:58.488Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:26:59.886Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:00.112Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:00.113Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:00.727Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:00.942Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:00.957Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:00.957Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:01.292Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:01.292Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:03.230Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:03.469Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:03.473Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:03.902Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:04.099Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:04.150Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:04.150Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:04.316Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:04.316Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:04.386Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:04.602Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:04.770Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:11.649Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:11.649Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:11.852Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:11.853Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:12.016Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:12.016Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:13.702Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:13.930Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:13.931Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:14.886Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:15.108Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:15.108Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:15.683Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:15.904Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:15.905Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:15.922Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:16.131Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:16.146Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:16.146Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:16.349Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:16.349Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:22.166Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:22.394Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:22.395Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:22.459Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:22.679Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:22.680Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:22.766Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:22.989Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:22.990Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:27:23.126Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:27:23.356Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:27:23.357Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:31:37.783Z] ----------------------------------------------------------------------
+[debug] [2022-03-18T12:31:37.790Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-03-18T12:31:37.792Z] CLI Version:   10.3.1
+[debug] [2022-03-18T12:31:37.792Z] Platform:      win32
+[debug] [2022-03-18T12:31:37.793Z] Node Version:  v16.14.1
+[debug] [2022-03-18T12:31:37.795Z] Time:          Fri Mar 18 2022 09:31:37 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-03-18T12:31:37.797Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-18T12:31:37.825Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-18T12:31:37.826Z] > authorizing via signed-in user (maximiano.neto@pumpkintech.com.br)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\maxim\IdeaProjects\FirebaseWeb
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-03-18T12:33:40.935Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-03-18T12:33:42.191Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-03-18T12:33:42.192Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project cloud-messaging-onnibank-dev (Cloud-Messaging-Onnibank-Dev) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-03-18T12:33:49.236Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-03-18T12:33:49.357Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-03-18T12:33:49.357Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.9","browserURL":"https://www.gstatic.com/firebasejs/9.6.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.9/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.9/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.9/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.9/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.9/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.9/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.9/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.9/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\maxim\IdeaProjects\FirebaseWeb is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=256154073&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-03-18T12:33:52.553Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"1bdba919ede01808e8cb","redirect_uri":"http://localhost:9005","state":"256154073"}
+[debug] [2022-03-18T12:33:52.844Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Fri, 18 Mar 2022 12:33:52 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"62747a5cdd2aab6b7a16f884b35b9a15\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com collector.github.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com collector.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"D3E9:5355:23E18C:2DDABB:62347C30"}
+[debug] [2022-03-18T12:33:52.859Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-03-18T12:33:53.168Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-03-18T12:33:53.168Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"MaximianoPumpkin","id":101645098,"node_id":"U_kgDOBg77Kg","avatar_url":"https://avatars.githubusercontent.com/u/101645098?v=4","gravatar_id":"","url":"https://api.github.com/users/MaximianoPumpkin","html_url":"https://github.com/MaximianoPumpkin","followers_url":"https://api.github.com/users/MaximianoPumpkin/followers","following_url":"https://api.github.com/users/MaximianoPumpkin/following{/other_user}","gists_url":"https://api.github.com/users/MaximianoPumpkin/gists{/gist_id}","starred_url":"https://api.github.com/users/MaximianoPumpkin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MaximianoPumpkin/subscriptions","organizations_url":"https://api.github.com/users/MaximianoPumpkin/orgs","repos_url":"https://api.github.com/users/MaximianoPumpkin/repos","events_url":"https://api.github.com/users/MaximianoPumpkin/events{/privacy}","received_events_url":"https://api.github.com/users/MaximianoPumpkin/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":1,"public_gists":0,"followers":0,"following":0,"created_at":"2022-03-15T12:58:57Z","updated_at":"2022-03-15T12:58:57Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as MaximianoPumpkin 
+[info] 
+[debug] [2022-03-18T12:34:14.756Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:14.984Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:14.984Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:16.326Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:16.556Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:16.557Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:20.285Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:20.511Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:20.511Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:20.901Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:21.145Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:21.145Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:21.244Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:21.468Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:21.468Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:21.506Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:21.721Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:21.735Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:21.735Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:21.936Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:21.937Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:22.348Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:22.576Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:22.576Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:22.585Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:22.792Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:22.811Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:22.811Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:22.995Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:23.009Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:23.009Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:23.180Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:23.223Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:23.224Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:23.421Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:23.422Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:40.389Z] >>> [apiv2][query] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:40.612Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:34:40.621Z] <<< [apiv2][status] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:40.621Z] <<< [apiv2][body] GET https://api.github.com/repos/CloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:34:40.829Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:34:40.830Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:35:48.278Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:35:48.519Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:35:48.519Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:35:52.847Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:35:53.079Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:35:53.079Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:35:58.910Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:35:59.157Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:35:59.173Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:35:59.173Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:35:59.374Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:35:59.387Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:35:59.387Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:35:59.715Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:35:59.716Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:00.767Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:00.998Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:00.998Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:01.621Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:01.650Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:01.868Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:01.868Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:01.881Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:01.881Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:02.238Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:02.470Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:02.478Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:02.478Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:02.662Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:02.700Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:02.700Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:02.845Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:02.885Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:02.885Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:02.979Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:03.066Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:03.066Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:03.074Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:03.213Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:03.214Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:03.291Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:03.291Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:07.110Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.340Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:07.340Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:07.624Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.652Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.685Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.740Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.791Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.794Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.854Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.860Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.862Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:07.863Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:07.884Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:07.885Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:07.910Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.916Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.918Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:07.918Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:07.943Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:07.967Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:07.967Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:07.977Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.003Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.010Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.012Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.036Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.036Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.060Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.068Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.068Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.078Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.086Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.086Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.111Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.131Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.131Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.136Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.136Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:08.144Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.179Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.180Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.194Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.203Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.203Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.207Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.229Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.229Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.234Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.284Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.287Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.287Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.308Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.309Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.338Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.346Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.346Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.347Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.390Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.390Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:36:08.404Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.408Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:36:08.414Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.414Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.443Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.443Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.456Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.456Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.505Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.505Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.562Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.562Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.567Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.568Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.622Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.622Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2022-03-18T12:36:08.629Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key 404
+[debug] [2022-03-18T12:36:08.629Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthenticationCloudMessageWebAuthentication/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
+[debug] [2022-03-18T12:41:18.300Z] ----------------------------------------------------------------------
+[debug] [2022-03-18T12:41:18.306Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\maxim\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2022-03-18T12:41:18.308Z] CLI Version:   10.3.1
+[debug] [2022-03-18T12:41:18.308Z] Platform:      win32
+[debug] [2022-03-18T12:41:18.308Z] Node Version:  v16.14.1
+[debug] [2022-03-18T12:41:18.319Z] Time:          Fri Mar 18 2022 09:41:18 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-03-18T12:41:18.319Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-18T12:41:18.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-18T12:41:18.336Z] > authorizing via signed-in user (maximiano.neto@pumpkintech.com.br)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\maxim\IdeaProjects\FirebaseWeb
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-03-18T12:41:44.822Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-03-18T12:41:45.430Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-03-18T12:41:45.431Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project cloud-messaging-onnibank-dev (Cloud-Messaging-Onnibank-Dev) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-03-18T12:41:55.172Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-03-18T12:41:55.280Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-03-18T12:41:55.280Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.6.9","browserURL":"https://www.gstatic.com/firebasejs/9.6.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.6.9/firebase.tgz"},"live":{"version":"9.6","browserURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.6/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.6.9/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.6.9/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.6.9/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.6.9/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.6.9/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.6.9/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.6.9/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.6.9/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.6.9/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.6.9/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.6.9/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.6.9/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming C:\Users\maxim\IdeaProjects\FirebaseWeb is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=409110119&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-03-18T12:41:59.801Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"bb019eeafe44317c5d72","redirect_uri":"http://localhost:9005","state":"409110119"}
+[debug] [2022-03-18T12:42:00.095Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Fri, 18 Mar 2022 12:41:59 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"1d50b588204b18c273c177bb91a0fc95\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com collector.github.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com collector.github.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"D824:5352:37BCA:D61B6:62347E17"}
+[debug] [2022-03-18T12:42:00.111Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-03-18T12:42:00.427Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-03-18T12:42:00.427Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"MaximianoPumpkin","id":101645098,"node_id":"U_kgDOBg77Kg","avatar_url":"https://avatars.githubusercontent.com/u/101645098?v=4","gravatar_id":"","url":"https://api.github.com/users/MaximianoPumpkin","html_url":"https://github.com/MaximianoPumpkin","followers_url":"https://api.github.com/users/MaximianoPumpkin/followers","following_url":"https://api.github.com/users/MaximianoPumpkin/following{/other_user}","gists_url":"https://api.github.com/users/MaximianoPumpkin/gists{/gist_id}","starred_url":"https://api.github.com/users/MaximianoPumpkin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MaximianoPumpkin/subscriptions","organizations_url":"https://api.github.com/users/MaximianoPumpkin/orgs","repos_url":"https://api.github.com/users/MaximianoPumpkin/repos","events_url":"https://api.github.com/users/MaximianoPumpkin/events{/privacy}","received_events_url":"https://api.github.com/users/MaximianoPumpkin/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":1,"public_gists":0,"followers":0,"following":0,"created_at":"2022-03-15T12:58:57Z","updated_at":"2022-03-15T12:58:57Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as MaximianoPumpkin 
+[info] 
+[debug] [2022-03-18T12:42:52.222Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/public-key type=owner
+[debug] [2022-03-18T12:42:52.460Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/public-key 200
+[debug] [2022-03-18T12:42:52.461Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/public-key {"key_id":"568250167242549743","key":"LomegFLDcKrWgjntyK8+w8R+wozpXErslcCJD4ABgz4="}
+[debug] [2022-03-18T12:42:52.463Z] >>> [apiv2][query] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication [none]
+[debug] [2022-03-18T12:42:52.719Z] <<< [apiv2][status] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication 200
+[debug] [2022-03-18T12:42:52.719Z] <<< [apiv2][body] GET https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication {"id":471358265,"node_id":"R_kgDOHBhbOQ","name":"CloudMessageWebAuthentication","full_name":"MaximianoPumpkin/CloudMessageWebAuthentication","private":false,"owner":{"login":"MaximianoPumpkin","id":101645098,"node_id":"U_kgDOBg77Kg","avatar_url":"https://avatars.githubusercontent.com/u/101645098?v=4","gravatar_id":"","url":"https://api.github.com/users/MaximianoPumpkin","html_url":"https://github.com/MaximianoPumpkin","followers_url":"https://api.github.com/users/MaximianoPumpkin/followers","following_url":"https://api.github.com/users/MaximianoPumpkin/following{/other_user}","gists_url":"https://api.github.com/users/MaximianoPumpkin/gists{/gist_id}","starred_url":"https://api.github.com/users/MaximianoPumpkin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MaximianoPumpkin/subscriptions","organizations_url":"https://api.github.com/users/MaximianoPumpkin/orgs","repos_url":"https://api.github.com/users/MaximianoPumpkin/repos","events_url":"https://api.github.com/users/MaximianoPumpkin/events{/privacy}","received_events_url":"https://api.github.com/users/MaximianoPumpkin/received_events","type":"User","site_admin":false},"html_url":"https://github.com/MaximianoPumpkin/CloudMessageWebAuthentication","description":null,"fork":false,"url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication","forks_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/forks","keys_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/keys{/key_id}","collaborators_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/teams","hooks_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/hooks","issue_events_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/issues/events{/number}","events_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/events","assignees_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/assignees{/user}","branches_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/branches{/branch}","tags_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/tags","blobs_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/git/refs{/sha}","trees_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/git/trees{/sha}","statuses_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/statuses/{sha}","languages_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/languages","stargazers_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/stargazers","contributors_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/contributors","subscribers_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/subscribers","subscription_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/subscription","commits_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/commits{/sha}","git_commits_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/git/commits{/sha}","comments_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/comments{/number}","issue_comment_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/issues/comments{/number}","contents_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/contents/{+path}","compare_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/compare/{base}...{head}","merges_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/merges","archive_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/downloads","issues_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/issues{/number}","pulls_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/pulls{/number}","milestones_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/milestones{/number}","notifications_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/labels{/name}","releases_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/releases{/id}","deployments_url":"https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/deployments","created_at":"2022-03-18T12:26:01Z","updated_at":"2022-03-18T12:26:01Z","pushed_at":"2022-03-18T12:26:02Z","git_url":"git://github.com/MaximianoPumpkin/CloudMessageWebAuthentication.git","ssh_url":"git@github.com:MaximianoPumpkin/CloudMessageWebAuthentication.git","clone_url":"https://github.com/MaximianoPumpkin/CloudMessageWebAuthentication.git","svn_url":"https://github.com/MaximianoPumpkin/CloudMessageWebAuthentication","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"network_count":0,"subscribers_count":1}
+[debug] [2022-03-18T12:42:52.722Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts [none]
+[debug] [2022-03-18T12:42:52.722Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts {"accountId":"github-action-471358265","serviceAccount":{"displayName":"GitHub Actions (MaximianoPumpkin/CloudMessageWebAuthentication)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository MaximianoPumpkin/CloudMessageWebAuthentication"}}
+[debug] [2022-03-18T12:42:54.108Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts 200
+[debug] [2022-03-18T12:42:54.109Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts {"name":"projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com","projectId":"cloud-messaging-onnibank-dev","uniqueId":"111588980496868635414","email":"github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com","displayName":"GitHub Actions (MaximianoPumpkin/CloudMessageWebAuthentication)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository MaximianoPumpkin/CloudMessageWebAuthentication","oauth2ClientId":"111588980496868635414"}
+[debug] [2022-03-18T12:42:54.114Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com [none]
+[debug] [2022-03-18T12:42:54.117Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:getIamPolicy [none]
+[debug] [2022-03-18T12:42:54.952Z] <<< [apiv2][status] GET https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com 200
+[debug] [2022-03-18T12:42:54.952Z] <<< [apiv2][body] GET https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com {"name":"projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com","projectId":"cloud-messaging-onnibank-dev","uniqueId":"111588980496868635414","email":"github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com","displayName":"GitHub Actions (MaximianoPumpkin/CloudMessageWebAuthentication)","etag":"MDEwMjE5MjA=","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository MaximianoPumpkin/CloudMessageWebAuthentication","oauth2ClientId":"111588980496868635414"}
+[debug] [2022-03-18T12:42:55.169Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:getIamPolicy 200
+[debug] [2022-03-18T12:42:55.170Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:getIamPolicy {"version":1,"etag":"BwXaWffKOtY=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-340072282581@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maximiano.neto@pumpkintech.com.br"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-340072282581@gcp-sa-pubsub.iam.gserviceaccount.com"]}]}
+[debug] [2022-03-18T12:42:55.171Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:setIamPolicy [none]
+[debug] [2022-03-18T12:42:55.171Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:setIamPolicy {"policy":{"version":1,"etag":"BwXaWffKOtY=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-340072282581@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maximiano.neto@pumpkintech.com.br"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-340072282581@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2022-03-18T12:42:56.426Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:setIamPolicy 200
+[debug] [2022-03-18T12:42:56.426Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cloud-messaging-onnibank-dev:setIamPolicy {"version":1,"etag":"BwXafXxkr5U=","bindings":[{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaseappcheck.admin","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaseauth.admin","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebasehosting.admin","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/firebaserules.system","members":["serviceAccount:service-340072282581@firebase-rules.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-gxmyd@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maximiano.neto@pumpkintech.com.br"]},{"role":"roles/pubsub.serviceAgent","members":["serviceAccount:service-340072282581@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/run.viewer","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]},{"role":"roles/serviceusage.apiKeysViewer","members":["serviceAccount:github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com"]}]}
+[debug] [2022-03-18T12:42:56.427Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com/keys [none]
+[debug] [2022-03-18T12:42:56.428Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com/keys {"keyAlgorithm":"KEY_ALG_UNSPECIFIED","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE"}
+[debug] [2022-03-18T12:42:57.539Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com/keys 200
+[debug] [2022-03-18T12:42:57.540Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com/keys {"name":"projects/cloud-messaging-onnibank-dev/serviceAccounts/github-action-471358265@cloud-messaging-onnibank-dev.iam.gserviceaccount.com/keys/d2aad1268c9f18bb6b05efe75175361b95c0a53a","privateKeyType":"TYPE_GOOGLE_CREDENTIALS_FILE","privateKeyData":"ewogICJ0eXBlIjogInNlcnZpY2VfYWNjb3VudCIsCiAgInByb2plY3RfaWQiOiAiY2xvdWQtbWVzc2FnaW5nLW9ubmliYW5rLWRldiIsCiAgInByaXZhdGVfa2V5X2lkIjogImQyYWFkMTI2OGM5ZjE4YmI2YjA1ZWZlNzUxNzUzNjFiOTVjMGE1M2EiLAogICJwcml2YXRlX2tleSI6ICItLS0tLUJFR0lOIFBSSVZBVEUgS0VZLS0tLS1cbk1JSUV2QUlCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktZd2dnU2lBZ0VBQW9JQkFRQzY0TzRVekpMMWV5WFpcbndYMkhheCtJaXBjakpTWmFxK3cxNDQ4aGpxcW8xQjk2R2FSRTRtRCtNV1hMWmVibmVTblJXd2RSS01PZm4wSm1cbmJLSll5TFgrMjk2MDVMeS9TZG0xYVQxV2M1cUdpTmRZU2RzNUNvSkh5LzUybHBFYUxJNkwwSkpFSHNaRFVMYTFcblBuemtWbHhrZS9nTCtaZXcrS2Q1Nkc3eUhxNUh4N0svR29wTnNKQU9Bb0QySGo0WE1IQ3hLZEE2bTEzWVpxdkNcbisrRjBUZmxlcFg0Um1JMVJhT01BYnNkcHhKY3B5S3VtYnhmQURYR3dQU2xXeFBydlFPSjdaVG56NmJPWHVlWStcbm1sRThjSzFTbllLSXZhZHJJa2pQdnZKcVRSWC9tTkJDZ05XRzVmbDY0VjlEV2laS1lHSFkvamcyQXZhdGcrN1RcbmFoK09HWWJGQWdNQkFBRUNnZ0VBSFdNMXpXdUdTTGcrOFlsdDloZXdjOFpua2cxTGhNSzRlSmo2YnlxQ1I5NWpcbnZNMi9lVjJvSnhFWmt1ekpiT2t1M0U5V1RUcjkyR0l4RE81VWNXWE95TzlHakdmVURyak1WYXpoQ25GUGdZeVBcbllNRHNpb0hPanYvVFdrNi9Mc0NIQWhHZ2pyblFMOUhIaWFUeit1eGh4eU4vbEZLQnVrREFCWG01eUxWdWJyY0Jcblo1WXFSRkljbkZIZjduS3ZJT1F4SHJqQUJmbUNQa3lseHUrMWNUbkF4Ujg3TFVleTRwK0tSbDRUcVIxOHIvZ1NcbmtaRXZyejBkNDd1Y29PR1hVNlQ1ZGo0VjBSQ1RoL3VNODJ3eU5wOEZNSXpHR2tjUStiWGptaWRzRU5DdG81K0pcbmFTKzJhbnBndWFBQVRlNWdVMk53OFo5TjFhMWxEc0psSjJYY2h2TTZtUUtCZ1FEMnkwL0NyekIzb1pqQkhCZFlcbk53a2lhZkM4UGs4a2w3VXhsWE9MNGUzQ1ViMDdzOWZ3ek84Z2p2WU03QkZMeGh2SElFbWhGY1JLSVdCV01IQWRcbnBUZnlvcmd5eVVNaEJJaGtudnhTL2NsbkF1TGJYNmlLMjFnOVloTVJ0Zk1HakZyZ25UR2txMlVkYWdwQzVSNFRcbjYydkhQdDhJYUpkY3FkM3dvVmdDR0MxTHF3S0JnUURCMlhqMTlWVE5HU00vWHlkTXVTdjVzMVJWY2d6dEdTejZcbnRiZTRLYmh5Uy9OdUJhWDZtbCswZkVzRnVlNzIvelExQTZUREF6RlVjbzY0SEphOEVvajc0MnNBaDljWVRKSlBcbkgrbGR6dkZOWUd3a2hyTXBYQm5NUEJERm40UjV3ZWZRdWhqbWxOYkdtcUpOallOT1k5Uno3THV4QzMxUnJUZ2FcbmQvSHNwNmlIVHdLQmdIcFhQeXJiZmNOUU1GRktnNmdQWUUvWEJLZk1tNThnTllwbTgraWNEeWtOTENtMGRZL0Jcbmg2azBOWFVpY1ZDRzNLNVJxeTVYZy83Ym5NNGRKUGNOT0Ribnd6Z3AzVVU0NGdRL2JBWVlHUWNmdnlYUXZkUlhcbjk5NDJDQTMzaklucWVnSnU2blVmSWZqNjRDdFpPUmZXMUk3bzg5ZFBRZm1GbTZmMTA1TDJPVDRSQW9HQVZ0Y0VcbnNES3lSWnNnUmpCclc1eU1qYlQvYjdQREJLaEZsUjY0NmVDT3gyMHM1VG5VakRxQjYwblBGZ2FnZmJmLy9FdmdcbmtKZ3FqaWt2dEZ6aVRlaUR3MHV5MEs4SjlkRy9yWUNmTzY0TVBWeVh0WmsrUTZZRnpJK1A5K2dwSVo1ektmZGtcblZrK1JFN0dNU2UrK1JlekU3Ulc5VTJmUlFUaTNMR3hWVFc0aU9sTUNnWUFwOEpIeGcxRW9QL3ZZcE82N284RXJcbjJjS21mUDUzaFk4ckw4MXA5ODVJVmlQakRGMTVEZHlZdlV5TzVQZWl5OVJLcjgxNFZoZG1zaDJsRUdRUE5xcHVcbkE0UmEvTVgxdk1UYVkvbTQ5TVc1VE9SdHpnUGsrUzV3TElhL0xLc25lRlNMeVJNbHl5VGxxRVNyenFJQWZXU0Rcbjg2MzYzNFRHdXA3cFh6RTBKcnlZVEE9PVxuLS0tLS1FTkQgUFJJVkFURSBLRVktLS0tLVxuIiwKICAiY2xpZW50X2VtYWlsIjogImdpdGh1Yi1hY3Rpb24tNDcxMzU4MjY1QGNsb3VkLW1lc3NhZ2luZy1vbm5pYmFuay1kZXYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLAogICJjbGllbnRfaWQiOiAiMTExNTg4OTgwNDk2ODY4NjM1NDE0IiwKICAiYXV0aF91cmkiOiAiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL2F1dGgiLAogICJ0b2tlbl91cmkiOiAiaHR0cHM6Ly9vYXV0aDIuZ29vZ2xlYXBpcy5jb20vdG9rZW4iLAogICJhdXRoX3Byb3ZpZGVyX3g1MDlfY2VydF91cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vb2F1dGgyL3YxL2NlcnRzIiwKICAiY2xpZW50X3g1MDlfY2VydF91cmwiOiAiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vcm9ib3QvdjEvbWV0YWRhdGEveDUwOS9naXRodWItYWN0aW9uLTQ3MTM1ODI2NSU0MGNsb3VkLW1lc3NhZ2luZy1vbm5pYmFuay1kZXYuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iCn0K","validAfterTime":"2022-03-18T12:42:57Z","validBeforeTime":"9999-12-31T23:59:59Z","keyAlgorithm":"KEY_ALG_RSA_2048","keyOrigin":"GOOGLE_PROVIDED","keyType":"USER_MANAGED"}
+[info] 
+[info] +  Created service account github-action-471358265 with Firebase Hosting admin permissions. 
+[debug] [2022-03-18T12:42:57.620Z] >>> [apiv2][query] PUT https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CLOUD_MESSAGING_ONNIBANK_DEV [none]
+[debug] [2022-03-18T12:42:57.620Z] >>> [apiv2][body] PUT https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CLOUD_MESSAGING_ONNIBANK_DEV {"encrypted_value":"yYXunPMjU0N5qExcOHDAmz6/Nw8OzznrXzJAUa1OR0fuTLrCmx1NlYJ32FCqd1kJhsR5DipXgptK+ojZ5NlfpWIuJmncC1R971oA0n5fnf8e0ali3dE3S5XPAwuEM1oFJid+MvVRaL9jiVEBO/3h4mrLKvpL0axUDDQp65kBjzuQkw/JKZXH+A9MxM9a8iMyOWjBXfbdcKqELGwGG7OBEmvKuWTqQ9tXmmC1uI/g/MbdoadnLSxI41GSy6rMsiFCsG14YnJbYJkFGhTLoFPJaR9Lmw3Dk+VWG2eCOuU4JtpQZiGcnyD97GbiyRa9pIWZjgsDgGuJxwmKmwgQaUKCtPw7yblaekqSTvxHjWylTe3m0EPhxuXjDHQq3MOeENXjrRuY7L7ABYuSVfdQsj6eFkqPFtiZZa33zRIslyoAVOzohofmROJI2zgI3r0QwKE3CR4g9IQ8Kafz5/bDEhR1iy+iGmWJ1nCGBozms85wa+nAGsP9CgM83cTEb+liD/gE/xx7Dc032uP6RwLaSR2SqTa6E9LZGK208UolXG2UK/yU6t325BkRbrHhuIwNDAXpyfduVxNVpWOTetkElmhc+2y5T2IdG6o0D6cvqwdzHeIyjkPkAxJjIGBbIQMxdGw7n3FPLOYLXb0guJjJhGWSePGfw6eBemtaklRmSXbOHD8Y39uvPc8RCz1YQ/KmDQRCzQOEE8kR64HKfNPkkN+dmqE9fGaQaPtOrfNJy9R8tR8rlmlX88/1vBwpC2a0UZE5kAuHMFNVAtT2M4IGEDMJ5p2oVBB2BqnU86lSdsDcRcElvCMWjDD8ca0MnKH3aiP6pMLRsY0EsHVHWXa6NgjVLny37eLiiE2Tzx9GmSmR8Xcutqs4UtGhmwUB5SYChoUFc87qThS4EXI/W0QKj5kH92o2DYJJ1wbAUulMTPAF3LqcTj5q9F5biyLd0uTUBJ/3ir1iifKWUTJrrH+4j9jWhhGTJ+YzCuS475hK7daPSOErDfgdnVkwjXFWPPlCY2+eA8SjkSekXeu6qsxXa0eou8Vku0zxK9HdFf0l1UY7alOGTT/aNPsyvcbz1iTrWyIUZYKa/hWzN0CU4imvPPNQ66bPpzoNejYd17TsY465FHytRFRxz99erIWjWr7nrZdeA6LDcFlb6Ly1v7evexMrOgxHfR5z+SaL/fLNx5NWS3PW+mYrgMv5mE97tXWrvqCgU2cAFxcBgjpbMeANuTNEUj+ad6ikJkN7T5bj+RDFF6/46SXr/bNxhHz/vWg3uehVvPQNw7mFvLgzjw6Lm32OMWc07RUoaJa4cAFYWziAq9wUZYhJsz0z+sLb4CrcpPPOs1fnyqRoiIG/L/ESZkLTvTdWay/4Oh67HjBqWrEYkGwzyZ9S37t9vrqJJXyq2ifrSMF0T24mFVZR/xl8tFVSjTr/Mkf0wo9vKKTSXD3hvOx131A9JnPqmFgodrCCpcipll/HpDd9eeO1WkPfZai7QgCjsum8gGvVLiIisYPPU5jUzWpBG37CHVlG9MIRbOKZN0WdTTlID9M8F/LybdCN71ctqz4ook/qWFgQ6a9sHihIKDtEvbnCPgppTIz99+j3m961UULSi+3OaNcD+Z7RD51dPY/PUf7Vfy7ehgAJEU2crposIRI/cZGlGJxXiPmfGaVRLEmDGOegiyUy0AhtHPCxKsntRDw4OiwEBC+Y3DhQbN2Tstt9sM2un7trm4FrxdQ2wLIRlLP6/FhqbqHP93X5sFRa23LJzShPtO67TtSq+DfektljGUiam0IK2oshZyUHpdiVCjbx9tCYTByDCv5vqBYJJfnyFqyvrU/PuBUu3Y5J9iqeX1+97O3ldTVpJ2PSR1VKx59h9Cah6ZbNk10EXLayFeGch4oUm7ExQ8eI/Ngkfg5ZjvfaVrmPWVk9rk0FnVJBZJ+kStCJlgP/8qmESd7p0lMlulg7AkFbT9I9BgJrpALPsV607yVTzGGYBb3QOHolt1K/39ZOuv0EbB3I1BDehx/a+x6U+P3tSctxuDhxh7B83TDVv7IXiM0MiDkDnmuzhIehkkSH6RL3wOLmHomXnST/WimQ3/eM8BEj5pAW2ln4OEWxuGSLpSN8pBbC8YipjW/cQRmBeS3oArXHRAuH2Fs/74PemFdsoVG+3PCUpYo4MLpxVKPJjczWVcCMBr90bHsKWbQUNq5Zc/xlnIeGfQ1DOPPCa686+pex9JVf+X3ZRm9NPMl91E4jYv3o7JdwwHTNbYRonPDwxpjnARhbuV+5NctceqxxAFPaWj958GAwKNtrSNj8LRPO4UTMY2XSFr5ELuDZEPcxSrOqXFxPcfSeKmuPOxl/a/5TpWrke5YTX/hzpFUU9bdo5N5um8cA2DEyYDapjN7/4j+M3vTlt12Std2/jAJqOZg5sLizOFTd9JTHkeHxPLw1JUJ2TRb1B1lNwVG0JBLShz3YPf1MfeiES3NPDSvkj6eC1MX4ILXuM5AIYxeO2N7wVjQ4NVyiI0wESIvhQx4sXZBkPw1DRuYIdq0C/9TyZYSx+PaZjvrNoECf5Q1fbqsBqBwCMBjmuQK9rMOUvmN/+ICyhlqW8Y8x0+NHcBDSVsBwNNKpBcP5LyE+0uvBMzKd892PWPjE98di2iSfbGuo9FzHrgDHp2CI6LIzeN9YWgcGCVBWC4WZz4GiEgz5r8xDKE7YB5OnF2vghmFjucyBbOoOhLGXDdq2Z1dpBK5FDgBGBns0UqBl6gr+P4ELa58oqgcdlTyajyspy5kuJkL/f77gMC+3CTmAECpEDHFACdR+rRoAuVRkaBrguqgf7FIzIqMQW67gE/dUZAxPhOiAbY2lan2vnnWhLjxO366CvnVgKtOk8K6jOSB0r4YQBMEZbZLdE2UELKUSIxi/uIbxn5OrYoRziT7hDsb5C9aFZbx7Mv1iOSmiwsIcPXlhXt+gFOonZp1jKgOFwFbqFF0R73KJGUr4ZZ1rvWg671Bd7Hf4xEcbYw/BiqY7Nwb2HvdLxtKFiStruT59vbRLn4Ksf33MFHA5NyAetO3fLdZ/3jiaYa7o8ipEdhKG+MdUjBXjMeWQ0vUcfh0XuGMm970RLEcc7bEO90If954Opv/FtuoTBS/kTBiCEkPJOdQ0FyyKTEeiYPIfkXawKWrwiDhN2sl5vBojG4YQhzf6n68rGDeKimAzOupWhDhqnZmbty45cX1xBn2pQZ59pcv3q75Oi0MqMnY86QQM65mK0rbOQsf1","key_id":"568250167242549743"}
+[debug] [2022-03-18T12:42:57.975Z] <<< [apiv2][status] PUT https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CLOUD_MESSAGING_ONNIBANK_DEV 201
+[debug] [2022-03-18T12:42:57.975Z] <<< [apiv2][body] PUT https://api.github.com/repos/MaximianoPumpkin/CloudMessageWebAuthentication/actions/secrets/FIREBASE_SERVICE_ACCOUNT_CLOUD_MESSAGING_ONNIBANK_DEV {}
+[info] +  Uploaded service account JSON to GitHub as secret FIREBASE_SERVICE_ACCOUNT_CLOUD_MESSAGING_ONNIBANK_DEV. 
+[info] i  You can manage your secrets at https://github.com/MaximianoPumpkin/CloudMessageWebAuthentication/settings/secrets. 
+[info] 
+[info] 
+[info] +  Created workflow file C:\Users\maxim\IdeaProjects\FirebaseWeb\.github/workflows/firebase-hosting-pull-request.yml 
