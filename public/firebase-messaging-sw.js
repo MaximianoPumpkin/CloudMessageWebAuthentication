@@ -3,7 +3,9 @@ importScripts(
     "https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js",);
 importScripts(
     "https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js",);
-
+    importScripts('/__/firebase/9.2.0/firebase-app-compat.js');
+    importScripts('/__/firebase/9.2.0/firebase-messaging-compat.js');
+    importScripts('/__/firebase/init.js');
 const firebaseConfig = {
   apiKey: "AIzaSyBsMeLfWpHfPVw6jWFaXj7vf22-H2yZpL4",
   authDomain: "cloud-messaging-onnibank-dev.firebaseapp.com",
@@ -19,21 +21,15 @@ firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
 
-messaging.setBackgroundMessageHandler(function(payload) {
-    console.log(
-        "[firebase-messaging-sw.js] Received background message ",
-        payload,
-    );
+messaging.onBackgroundMessage(function(payload) {
+    console.log('[firebase-messaging-sw.js] Received background message ', payload);
     // Customize notification here
-    const notificationTitle = "Background Message Title";
+    const notificationTitle = 'Background Message Title';
     const notificationOptions = {
-        body: "Background Message body.",
-        icon: "/itwonders-web-logo.png",
+      body: 'Background Message body.',
+      icon: '/firebase-logo.png'
     };
-
-    return self.registration.showNotification(
-        notificationTitle,
-        notificationOptions,
-    );
-});
-
+  
+    self.registration.showNotification(notificationTitle,
+      notificationOptions);
+  });
