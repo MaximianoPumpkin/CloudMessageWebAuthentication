@@ -77,6 +77,15 @@ limitations under the License.
 <script src="/__/firebase/init.js"></script>
 
 <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        // navigator.serviceWorker.register("/flutter_service_worker.js");
+        navigator.serviceWorker.register("/firebase-messaging-sw.js");
+      });
+    }
+    </script>
+
+<script>
   // Retrieve Firebase Messaging object.
   const messaging = firebase.messaging();
 
